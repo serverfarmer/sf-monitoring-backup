@@ -8,7 +8,7 @@ path=`local_backup_directory`
 daily=`du -sb $path/daily |cut -f1`
 weekly=`du -sb $path/weekly |cut -f1`
 custom=`du -sb $path/custom |cut -f1`
-temp=`du --exclude daily --exclude weekly --exclude custom -sb $path/* |cut -dM -f1 |awk '{s+=$1} END {if (s>0) print s; else print 0}'`
+temp=`du --exclude daily --exclude weekly --exclude custom --exclude lost+found -sb $path/* |cut -f1 |awk '{s+=$1} END {if (s>0) print s; else print 0}'`
 
 sessions=`logtail -f/var/log/auth.log -o/var/cache/cacti/auth.offset |grep "Accepted publickey for backup from" |wc -l`
 
