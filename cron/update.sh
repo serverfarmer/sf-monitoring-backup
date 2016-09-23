@@ -2,7 +2,7 @@
 . /opt/farm/scripts/init
 . /opt/farm/scripts/functions.custom
 
-license="`cat /etc/local/.config/newrelic.license2`"
+license="`cat /etc/local/.config/newrelic.license`"
 
 path=`local_backup_directory`
 daily=`du -sb $path/daily |cut -f1`
