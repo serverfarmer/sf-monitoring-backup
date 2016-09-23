@@ -14,6 +14,8 @@ if [ ! -s /etc/local/.config/newrelic.license ]; then
 	exit 0
 fi
 
+install_deb logtail
+
 mkdir -p /var/cache/cacti
 
 if ! grep -q /opt/farm/ext/monitoring-backup/cron/update.sh /etc/crontab; then
