@@ -8,7 +8,7 @@ if [ "$HWTYPE" = "container" ] || [ "$HWTYPE" = "lxc" ]; then
 	exit 1
 fi
 
-/opt/farm/scripts/setup/role.sh sf-monitoring-newrelic
+/opt/farm/scripts/setup/extension.sh sf-monitoring-newrelic
 
 if [ ! -s /etc/local/.config/newrelic.license ]; then
 	echo "skipping backup monitoring configuration (no license key configured)"
