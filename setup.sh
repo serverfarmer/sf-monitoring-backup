@@ -15,7 +15,7 @@ if [ ! -s /etc/local/.config/newrelic.license ]; then
 	exit 0
 fi
 
-install_deb logtail
+/opt/farm/ext/repos/package/install.sh logtail
 
 mkdir -p /var/cache/cacti
 
