@@ -1,6 +1,5 @@
 #!/bin/bash
 . /opt/farm/scripts/init
-. /opt/farm/scripts/functions.install
 
 
 if [ "$HWTYPE" = "container" ] || [ "$HWTYPE" = "lxc" ]; then
