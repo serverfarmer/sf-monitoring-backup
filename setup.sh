@@ -7,6 +7,7 @@ if [ "$HWTYPE" = "container" ] || [ "$HWTYPE" = "lxc" ]; then
 	exit 1
 fi
 
+/opt/farm/scripts/setup/extension.sh sf-cache-utils
 /opt/farm/scripts/setup/extension.sh sf-monitoring-newrelic
 
 if [ ! -s /etc/local/.config/newrelic.license ]; then
@@ -15,8 +16,6 @@ if [ ! -s /etc/local/.config/newrelic.license ]; then
 fi
 
 /opt/farm/ext/repos/utils/install.sh logtail
-
-mkdir -p /var/cache/cacti
 
 if ! grep -q /opt/farm/ext/monitoring-backup/cron/update.sh /etc/crontab; then
 	echo "setting up crontab entry"
