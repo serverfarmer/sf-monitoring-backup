@@ -15,7 +15,7 @@ if [ ! -s /etc/local/.config/newrelic.license ]; then
 	exit 0
 fi
 
-/opt/farm/ext/repos/utils/install.sh logtail
+/opt/farm/ext/packages/utils/install.sh logtail
 
 if ! grep -q /opt/farm/ext/monitoring-backup/cron/update.sh /etc/crontab; then
 	echo "setting up crontab entry"
