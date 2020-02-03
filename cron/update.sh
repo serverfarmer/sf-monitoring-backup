@@ -1,10 +1,9 @@
-#!/bin/bash
+#!/bin/sh
 . /opt/farm/scripts/init
-. /opt/farm/scripts/functions.custom
 
 license="`cat /etc/local/.config/newrelic.license`"
 
-path=`local_backup_directory`
+path=`/opt/farm/config/get-local-backup-directory.sh`
 daily=`du -sb $path/daily |cut -f1`
 weekly=`du -sb $path/weekly |cut -f1`
 custom=`du -sb $path/custom |cut -f1`
