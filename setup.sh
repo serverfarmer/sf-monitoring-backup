@@ -2,8 +2,8 @@
 . /opt/farm/scripts/init
 
 
-if [ "$HWTYPE" = "container" ] || [ "$HWTYPE" = "lxc" ]; then
-	echo "skipping backup monitoring configuration (container backups are performed by host)"
+if [ "$HWTYPE" = "lxc" ]; then
+	echo "skipping backup monitoring configuration (LXC backups are performed by host)"
 	exit 1
 fi
 
