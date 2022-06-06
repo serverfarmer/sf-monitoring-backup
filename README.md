@@ -1,5 +1,7 @@
-sf-monitoring-backup extension provides easy monitoring of backup sizes
-and backup collector activities using New Relic platform.
+## Deprecated
 
-It is compatible with almost all operating systems supported by Server
-Farmer.
+This repository contains old, deprecated extension to Server Farmer.
+
+New Relic Plugins plaform was shut down in 2021:
+
+https://discuss.newrelic.com/t/new-relic-plugin-eol-wednesday-june-16th-2021/127267
